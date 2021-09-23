@@ -2,6 +2,12 @@
 .settings
 target/
 
+# IntelliJ
+.idea
+
+# Maven Install
+*.iml
+
 # Compiled class file
 *.class
 

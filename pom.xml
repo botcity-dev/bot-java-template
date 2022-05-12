@@ -82,7 +82,7 @@
 		<dependency>
 	    <groupId>dev.botcity</groupId>
 	    <artifactId>botcity-framework-core</artifactId>
-	    <version>1.0</version>
+	    <version>1.3.0</version>
 	    </dependency>
 	    
 	    <dependency>
@@ -94,7 +94,7 @@
 		<dependency>
 		    <groupId>dev.botcity</groupId>
 		    <artifactId>maestro-sdk</artifactId>
-		    <version>1.0</version>
+		    <version>1.2.3</version>
 		</dependency>
 		
 		<dependency>

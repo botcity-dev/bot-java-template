@@ -22,7 +22,7 @@ public class FirstBot extends DesktopBot implements RunnableAgent
 
 		try {
 			// To open a web page
-			// browse("https://www.linkedin.com/in/lorhan/");
+			browse("https://www.botcity.dev");
 			
 			// To exec an application (Windows)
 			// exec("calc.exe");

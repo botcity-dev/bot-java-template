@@ -12,9 +12,9 @@ echo -e "############  Generating the build (compile and package). ############ 
 mvn clean package
 CMD_MVN_PACKAGE=$?
 if [ $CMD_MVN_PACKAGE -ne 0 ] ; then
-  echo -e "$ERROR************************************************************************"
-  echo -e "$ERROR###### FAIL: an error occurred when trying to deploy in nexus :( ######"
-  echo -e "$ERROR************************************************************************"
+  echo -e "$ERROR*****************************************************************************"
+  echo -e "$ERROR###### BUILD FAILURE: an error occurred in the build of the project :( ######"
+  echo -e "$ERROR*****************************************************************************"
   exit $CMD_MVN_PACKAGE
 fi
 

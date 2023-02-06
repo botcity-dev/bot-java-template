@@ -1,5 +1,5 @@
 > ## Bot Java Template
-Template project to start developing RPA automation of web applications
+Template project to start developing RPA automation of desketop applications
 
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![issues](https://img.shields.io/github/issues/botcity-dev/bot-java-template)](https://github.com/botcity-dev/bot-java-template/issues)
@@ -12,7 +12,7 @@ Template project to start developing RPA automation of web applications
 [![image](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/botcitydev)
 [![image](https://img.shields.io/badge/Blogger-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://blog.botcity.dev/pt-br/)
 [![image](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/botcity_dev/)
-[![image](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://communitybotcitydev.slack.com/)
+[![image](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://botcity.dev/slack)
 
 ### Important Links & Docs.
 * Please use [Community BotCity](https://community.botcity.dev/) for quick answers to questions.
@@ -34,7 +34,7 @@ There are a number of third-party dependencies used in the project. Browse the M
 
 ```
 mvn clean install
-mvn compile exec:java -Dexec.mainClass="dev.botcity.main.FirstBot"
+mvn compile exec:java -Dexec.mainClass="br.com.main.FirstBot"
 ```
 
 ### Nexus Repository
@@ -43,7 +43,7 @@ The dependencies are hosted in our public repository on NEXUS, the code below, w
 <repositories>
     <repository>
         <id>nexus-botcity-public</id>
-        <url>https://botcity/repository/botcity-public/</url>
+        <url>https://devtools.botcity.dev:8081/repository/botcity-public/</url>
         <snapshots>
             <enabled>true</enabled>
         </snapshots>

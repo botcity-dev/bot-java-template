@@ -1,4 +1,4 @@
-package dev.botcity.main;
+package br.com.main;
 
 import dev.botcity.framework.bot.DesktopBot;
 import dev.botcity.maestro_sdk.BotExecutor;

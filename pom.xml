@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.botcity</groupId>
+    <groupId>template.botcity</groupId>
     <artifactId>FirstBot</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
@@ -14,7 +14,7 @@
     </description>
 
     <properties>
-        <main-class>dev.botcity.main.FirstBot</main-class>
+        <main-class>br.com.main.FirstBot</main-class>
         <uri-root-nexus>https://devtools.botcity.dev:8081/repository</uri-root-nexus>
         <java.version>8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,12 +25,8 @@
         <marvin.version>2.0.0</marvin.version>
         <botcity-framework-core.version>1.5.0</botcity-framework-core.version>
         <maestro-sdk.version>1.2.3</maestro-sdk.version>
-        <bot-chrome-sdk.version>1.0.0</bot-chrome-sdk.version>
         <commons-io.version>2.8.0</commons-io.version>
         <gson.version>2.7</gson.version>
-        <httpclient.version>4.5.13</httpclient.version>
-        <httpcore.version>4.4.14</httpcore.version>
-        <httpmime.versioon>4.5.13</httpmime.versioon>
         <junit.version>3.8.1</junit.version>
     </properties>
 
@@ -84,25 +80,13 @@
                     </descriptorRefs>
                     <finalName>${project.artifactId}-${project.version}</finalName>
                     <appendAssemblyId>false</appendAssemblyId>
+                    <outputDirectory>dist</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.marvinproject</groupId>
-            <artifactId>marvin-framework</artifactId>
-            <version>${marvin.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.marvinproject</groupId>
-            <artifactId>marvin-plugins</artifactId>
-            <version>${marvin.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>dev.botcity</groupId>
             <artifactId>botcity-framework-core</artifactId>
@@ -113,49 +97,6 @@
             <groupId>dev.botcity</groupId>
             <artifactId>maestro-sdk</artifactId>
             <version>${maestro-sdk.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>dev.botcity</groupId>
-            <artifactId>bot-chrome-sdk</artifactId>
-            <version>${bot-chrome-sdk.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>${httpclient.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>${httpcore.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpmime</artifactId>
-            <version>${httpmime.versioon}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

@@ -14,20 +14,16 @@
     </description>
 
     <properties>
+        <jdk.version>11</jdk.version>
         <main-class>br.com.main.FirstBot</main-class>
         <uri-root-nexus>https://devtools.botcity.dev:8081/repository</uri-root-nexus>
-        <java.version>8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven-compiler.version>3.8.0</maven-compiler.version>
+        <maven.version>3.8.0</maven.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <marvin.version>2.0.0</marvin.version>
         <botcity-framework-core.version>1.5.0</botcity-framework-core.version>
         <maestro-sdk.version>1.2.3</maestro-sdk.version>
-        <commons-io.version>2.8.0</commons-io.version>
-        <gson.version>2.7</gson.version>
-        <junit.version>3.8.1</junit.version>
     </properties>
 
     <repositories>
@@ -50,13 +46,27 @@
             </resource>
         </resources>
         <sourceDirectory>src/main/java</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.version}</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <release>${jdk.version}</release>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler.version}</version>
+                <version>${maven.version}</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                    <release>${jdk.version}</release>
                 </configuration>
             </plugin>
             <plugin>

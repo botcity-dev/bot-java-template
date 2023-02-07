@@ -21,7 +21,7 @@ Template project to start developing RPA automation of desketop applications
 
 ### Requirements.
 For building and running the application you need:
-- [JDK 1.8](https://www.oracle.com/java/technologies/downloads/#java8)
+- [JDK 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 - [Maven 3](https://maven.apache.org)
 
 ### Dependencies.

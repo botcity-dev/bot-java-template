@@ -1,131 +1,113 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>dev.botcity</groupId>
-  <artifactId>FirstBot</artifactId>
-  <version>1.0</version>
-  <packaging>jar</packaging>
+    <groupId>template.botcity</groupId>
+    <artifactId>FirstBot</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
 
-  <name>FirstBot</name>
-  <url>http://maven.apache.org</url>
+    <name>FirstBot</name>
+    <url>http://maven.apache.org</url>
+    <description>
+        BotCity Template project for RPA automation of desktop applications.
+    </description>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <jdk.version>11</jdk.version>
+        <main-class>br.com.main.FirstBot</main-class>
+        <uri-root-nexus>https://devtools.botcity.dev:8081/repository</uri-root-nexus>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.version>3.8.0</maven.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
 
-  <build>
-  	<resources>
-     <resource>
-       <directory>src/resources</directory>
-     </resource>
-   </resources>
-   
-  	<plugins>
-  	
-  			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			
-  			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-assembly-plugin</artifactId>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>single</goal>
-						</goals>
-						<configuration>
-							<archive>
-								<manifest>
-									<mainClass>
-										dev.botcity.main.FirstBot
-									</mainClass>
-								</manifest>
-							</archive>
-							<descriptorRefs>
-								<descriptorRef>jar-with-dependencies</descriptorRef>
-							</descriptorRefs>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-	</plugins>
-  </build>
+        <botcity-framework-core.version>1.5.0</botcity-framework-core.version>
+        <maestro-sdk.version>1.2.3</maestro-sdk.version>
+    </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    
-    <dependency>
-			<groupId>org.marvinproject</groupId>
-			<artifactId>MarvinFramework</artifactId>
-			<version>2.0</version>
-		</dependency>
+    <repositories>
+        <repository>
+            <id>nexus-botcity-public</id>
+            <url>${uri-root-nexus}/botcity-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
-		<dependency>
-			<groupId>org.marvinproject</groupId>
-			<artifactId>MarvinPlugins</artifactId>
-			<version>2.0</version>
-		</dependency>
-		
-		<dependency>
-	    <groupId>dev.botcity</groupId>
-	    <artifactId>botcity-framework-core</artifactId>
-	    <version>1.5.0</version>
-	    </dependency>
-	    
-	    <dependency>
-		    <groupId>commons-io</groupId>
-		    <artifactId>commons-io</artifactId>
-		    <version>2.8.0</version>
-		</dependency>
-    
-		<dependency>
-		    <groupId>dev.botcity</groupId>
-		    <artifactId>maestro-sdk</artifactId>
-		    <version>1.2.3</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>dev.botcity</groupId>
-		    <artifactId>BotChromeSDK</artifactId>
-		    <version>1.0</version>
-		</dependency>
-		
-		<dependency>
-	    <groupId>com.google.code.gson</groupId>
-	    <artifactId>gson</artifactId>
-	    <version>2.8.6</version>
-	</dependency>
-	
-	<dependency>
-		    <groupId>org.apache.httpcomponents</groupId>
-		    <artifactId>httpclient</artifactId>
-		    <version>4.5.13</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.httpcomponents</groupId>
-		    <artifactId>httpcore</artifactId>
-		    <version>4.4.14</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.apache.httpcomponents</groupId>
-		    <artifactId>httpmime</artifactId>
-		    <version>4.5.13</version>
-		</dependency>
-    
-  </dependencies>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/resources</directory>
+            </resource>
+        </resources>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.version}</version>
+                    <configuration>
+                        <source>${maven.compiler.source}</source>
+                        <target>${maven.compiler.target}</target>
+                        <release>${jdk.version}</release>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <release>${jdk.version}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${main-class}</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+<!--                    <outputDirectory>dist</outputDirectory>-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>dev.botcity</groupId>
+            <artifactId>botcity-framework-core</artifactId>
+            <version>${botcity-framework-core.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.botcity</groupId>
+            <artifactId>maestro-sdk</artifactId>
+            <version>${maestro-sdk.version}</version>
+        </dependency>
+    </dependencies>
 </project>

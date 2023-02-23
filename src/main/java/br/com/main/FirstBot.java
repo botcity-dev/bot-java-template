@@ -1,9 +1,7 @@
-package dev.botcity.main;
+package br.com.main;
 
-import dev.botcity.BotChromeSDK.JavascriptCodes;
 import dev.botcity.framework.bot.DesktopBot;
 import dev.botcity.maestro_sdk.BotExecutor;
-import dev.botcity.maestro_sdk.BotMaestroSDK;
 import dev.botcity.maestro_sdk.runner.BotExecution;
 import dev.botcity.maestro_sdk.runner.RunnableAgent;
 

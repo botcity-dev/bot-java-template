@@ -1,12 +1,17 @@
 # IntelliJ
 .idea
+*.iws
 *.iml
+*.ipr
 
 .DS_Store
 
 #Eclipse
-.settings
+.settings/
+.project
+.classpath
 target/
+dist/
 
 # Compiled class file
 *.class

@@ -23,7 +23,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
 
         <botcity-framework-core.version>1.5.0</botcity-framework-core.version>
-        <maestro-sdk.version>1.2.3</maestro-sdk.version>
+        <maestro-sdk.version>2.0.3</maestro-sdk.version>
     </properties>
 
     <repositories>
